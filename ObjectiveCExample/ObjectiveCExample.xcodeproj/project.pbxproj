@@ -83,6 +83,18 @@
 		8DFE1A361BDAA10100709011 /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8DFE1A261BDAA10100709011 /* 7.m4a */; };
 		C77CFC8C1852DCA7782A7CCB /* Pods_core_ObjectiveCExampleTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FBFA6A604DC4631E2B97F9 /* Pods_core_ObjectiveCExampleTests_iOS.framework */; };
 		E31E9B694ECEB2E3932D8597 /* Pods_core_ObjectiveCExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49974600DB985CD98FC3AD39 /* Pods_core_ObjectiveCExample.framework */; };
+		E5390845215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390841215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip */; };
+		E5390846215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390841215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip */; };
+		E5390847215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390841215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip */; };
+		E5390848215A903500DA42D3 /* TestPasswordArchiveWithEmptyFile.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390842215A903400DA42D3 /* TestPasswordArchiveWithEmptyFile.zip */; };
+		E5390849215A903500DA42D3 /* TestPasswordArchiveWithEmptyFile.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390842215A903400DA42D3 /* TestPasswordArchiveWithEmptyFile.zip */; };
+		E539084A215A903500DA42D3 /* TestPasswordArchiveWithEmptyFile.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390842215A903400DA42D3 /* TestPasswordArchiveWithEmptyFile.zip */; };
+		E539084B215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390843215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip */; };
+		E539084C215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390843215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip */; };
+		E539084D215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390843215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip */; };
+		E539084E215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390844215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip */; };
+		E539084F215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390844215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip */; };
+		E5390850215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip in Resources */ = {isa = PBXBuildFile; fileRef = E5390844215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip */; };
 		F70E9D3A6F1E9FF335385D4A /* Pods_core_ObjectiveCExampleTests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D314711A618CA3AC838E95C1 /* Pods_core_ObjectiveCExampleTests_tvOS.framework */; };
 		F7D6D86D1CFB2C4900DA6DA6 /* Sample Data in Resources */ = {isa = PBXBuildFile; fileRef = F7D6D86C1CFB2C4900DA6DA6 /* Sample Data */; };
 /* End PBXBuildFile section */
@@ -138,6 +150,10 @@
 		CD7C1D2CFA646F90A02312F4 /* Pods-core-ObjectiveCExampleTests_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-core-ObjectiveCExampleTests_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-core-ObjectiveCExampleTests_iOS/Pods-core-ObjectiveCExampleTests_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D314711A618CA3AC838E95C1 /* Pods_core_ObjectiveCExampleTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_core_ObjectiveCExampleTests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1DEADE9E9CE0AF5B487DCF /* Pods-core-ObjectiveCExampleTests_tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-core-ObjectiveCExampleTests_tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-core-ObjectiveCExampleTests_tvOS/Pods-core-ObjectiveCExampleTests_tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		E5390841215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip; sourceTree = "<group>"; };
+		E5390842215A903400DA42D3 /* TestPasswordArchiveWithEmptyFile.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = TestPasswordArchiveWithEmptyFile.zip; sourceTree = "<group>"; };
+		E5390843215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = TestPasswordArchiveWithEmptyDirectoryAndFile.zip; sourceTree = "<group>"; };
+		E5390844215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = TestPasswordArchiveWithEmptyDirectoryOnly.zip; sourceTree = "<group>"; };
 		F7D6D86C1CFB2C4900DA6DA6 /* Sample Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sample Data"; sourceTree = "<group>"; };
 		FB7EEC7952E1561D1E668B3B /* Pods-core-ObjectiveCExampleTests_tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-core-ObjectiveCExampleTests_tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-core-ObjectiveCExampleTests_tvOS/Pods-core-ObjectiveCExampleTests_tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +276,10 @@
 		8DFE1A151BDAA10100709011 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				E5390843215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip */,
+				E5390841215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip */,
+				E5390844215A903400DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip */,
+				E5390842215A903400DA42D3 /* TestPasswordArchiveWithEmptyFile.zip */,
 				5FBB318120AF99BC003BA18F /* PathTraversal.zip */,
 				3754B1311F88961800A58AA0 /* Empty.zip */,
 				8DFE1A161BDAA10100709011 /* hello.zip */,
@@ -441,12 +461,16 @@
 				3773ADBE1F7F4D13009A4B2D /* Unicode.zip in Resources */,
 				3773ADBF1F7F4D16009A4B2D /* PermissionsTestApp.app in Resources */,
 				3773ADBB1F7F4D13009A4B2D /* SymbolicLink.zip in Resources */,
+				E539084C215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip in Resources */,
 				3773ADBA1F7F4D13009A4B2D /* RelativeSymbolicLink.zip in Resources */,
+				E5390849215A903500DA42D3 /* TestPasswordArchiveWithEmptyFile.zip in Resources */,
 				3773ADB81F7F4D13009A4B2D /* hello.zip in Resources */,
 				3773ADC71F7F4D1C009A4B2D /* 7.m4a in Resources */,
 				3773ADC61F7F4D1C009A4B2D /* 6.m4a in Resources */,
 				3773ADBC1F7F4D13009A4B2D /* TestArchive.zip in Resources */,
 				3773ADBD1F7F4D13009A4B2D /* TestPasswordArchive.zip in Resources */,
+				E5390846215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip in Resources */,
+				E539084F215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,12 +490,16 @@
 				3793E6EF1F7F6059000B1A19 /* Unicode.zip in Resources */,
 				3793E6EA1F7F6059000B1A19 /* IncorrectHeaders.zip in Resources */,
 				3793E6EE1F7F6059000B1A19 /* TestPasswordArchive.zip in Resources */,
+				E539084D215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip in Resources */,
 				3793E6E51F7F6052000B1A19 /* 4.m4a in Resources */,
+				E539084A215A903500DA42D3 /* TestPasswordArchiveWithEmptyFile.zip in Resources */,
 				3793E6E81F7F6052000B1A19 /* 7.m4a in Resources */,
 				3793E6E31F7F6052000B1A19 /* 2.m4a in Resources */,
 				3793E6EC1F7F6059000B1A19 /* SymbolicLink.zip in Resources */,
 				3793E6E21F7F6052000B1A19 /* 1.m4a in Resources */,
 				3793E6E11F7F6052000B1A19 /* 0.m4a in Resources */,
+				E5390847215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip in Resources */,
+				E5390850215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,12 +531,16 @@
 				8DFE1A281BDAA10100709011 /* IncorrectHeaders.zip in Resources */,
 				8DFE1A2A1BDAA10100709011 /* RelativeSymbolicLink.zip in Resources */,
 				8DFE1A2E1BDAA10100709011 /* Unicode.zip in Resources */,
+				E539084B215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFile.zip in Resources */,
 				8DFE1A2C1BDAA10100709011 /* TestArchive.zip in Resources */,
+				E5390848215A903500DA42D3 /* TestPasswordArchiveWithEmptyFile.zip in Resources */,
 				8DFE1A271BDAA10100709011 /* hello.zip in Resources */,
 				8DFE1A361BDAA10100709011 /* 7.m4a in Resources */,
 				8DFE1A351BDAA10100709011 /* 6.m4a in Resources */,
 				8DFE1A2B1BDAA10100709011 /* SymbolicLink.zip in Resources */,
 				8DFE1A291BDAA10100709011 /* PermissionsTestApp.app in Resources */,
+				E5390845215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine.zip in Resources */,
+				E539084E215A903500DA42D3 /* TestPasswordArchiveWithEmptyDirectoryOnly.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

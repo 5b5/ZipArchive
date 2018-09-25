@@ -237,6 +237,63 @@
     XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
 }
 
+- (void)testIsPasswordValidForArchiveAtPathWithEmptyDirFirst {
+    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryAndFile" ofType:@"zip"];
+    
+    NSError *error = nil;
+    
+    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
+    
+    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
+    
+    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
+    
+    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+}
+
+- (void)testIsPasswordValidForArchiveAtPathWithEmptyDirFirstCmdLine {
+    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine" ofType:@"zip"];
+    
+    NSError *error = nil;
+    
+    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
+    
+    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
+    
+    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
+    
+    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+}
+
+- (void)testIsPasswordValidForArchiveAtPathWithEmptyDirOnly {
+    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryOnly" ofType:@"zip"];
+    
+    NSError *error = nil;
+    
+    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
+    
+    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
+    
+    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
+    
+    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports false.");
+}
+
+- (void)testIsPasswordValidForArchiveAtPathWithEmptyFile {
+    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyFile" ofType:@"zip"];
+    
+    NSError *error = nil;
+    
+    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
+    
+    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
+    
+    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
+    
+    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+}
+
+
 - (void)testIsFilePasswordProtectedAtPath {
     NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestArchive" ofType:@"zip"];
     
@@ -247,7 +304,27 @@
     NSString *zipWithPasswordPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchive" ofType:@"zip"];
     
     protected = [SSZipArchive isFilePasswordProtectedAtPath:zipWithPasswordPath];
-    XCTAssertTrue(protected, @"has password");
+    XCTAssertTrue(protected, @"TestPasswordArchive has password");
+
+    NSString *zipWithPasswordPathDirAndFile = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryAndFile" ofType:@"zip"];
+    
+    protected = [SSZipArchive isFilePasswordProtectedAtPath:zipWithPasswordPathDirAndFile];
+    XCTAssertTrue(protected, @"TestPasswordArchiveWithEmptyDirectoryAndFile has password");
+    
+    NSString *zipWithPasswordPathDirAndFileCmdLine = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine" ofType:@"zip"];
+    
+    protected = [SSZipArchive isFilePasswordProtectedAtPath:zipWithPasswordPathDirAndFileCmdLine];
+    XCTAssertTrue(protected, @"TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine has password");
+    
+    NSString *zipWithPasswordPathDirOnly = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryOnly" ofType:@"zip"];
+    
+    protected = [SSZipArchive isFilePasswordProtectedAtPath:zipWithPasswordPathDirOnly];
+    XCTAssertTrue(protected, @"TestPasswordArchiveWithEmptyDirectoryOnly has password");
+
+    NSString *zipWithPasswordPathEmptyFile = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyFile" ofType:@"zip"];
+    
+    protected = [SSZipArchive isFilePasswordProtectedAtPath:zipWithPasswordPathEmptyFile];
+    XCTAssertTrue(protected, @"TestPasswordArchiveWithEmptyFile has password");
 }
 
 - (void)testZippingAndUnzippingWithUnicodePassword {
