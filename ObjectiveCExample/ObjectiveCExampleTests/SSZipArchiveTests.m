@@ -222,9 +222,8 @@
     XCTAssertFalse([fileManager fileExistsAtPath:testPath], @"LICENSE not unzipped");
 }
 
-
-- (void)testIsPasswordInvalidForArchiveAtPath {
-    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchive" ofType:@"zip"];
+- (void)performIsPasswordInvalidForArchiveAtPathTestWithResourceName:(NSString *)resourceName {
+    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:resourceName ofType:@"zip"];
     
     NSError *error = nil;
     
@@ -235,62 +234,27 @@
     BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
     
     XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+}
+
+
+- (void)testIsPasswordInvalidForArchiveAtPath {
+    [self performIsPasswordInvalidForArchiveAtPathTestWithResourceName:@"TestPasswordArchive"];
 }
 
 - (void)testIsPasswordValidForArchiveAtPathWithEmptyDirFirst {
-    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryAndFile" ofType:@"zip"];
-    
-    NSError *error = nil;
-    
-    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
-    
-    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
-    
-    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
-    
-    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+    [self performIsPasswordInvalidForArchiveAtPathTestWithResourceName:@"TestPasswordArchiveWithEmptyDirectoryAndFile"];
 }
 
 - (void)testIsPasswordValidForArchiveAtPathWithEmptyDirFirstCmdLine {
-    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine" ofType:@"zip"];
-    
-    NSError *error = nil;
-    
-    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
-    
-    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
-    
-    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
-    
-    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+    [self performIsPasswordInvalidForArchiveAtPathTestWithResourceName:@"TestPasswordArchiveWithEmptyDirectoryAndFileCmdLine"];
 }
 
 - (void)testIsPasswordValidForArchiveAtPathWithEmptyDirOnly {
-    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyDirectoryOnly" ofType:@"zip"];
-    
-    NSError *error = nil;
-    
-    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
-    
-    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
-    
-    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
-    
-    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports false.");
+    [self performIsPasswordInvalidForArchiveAtPathTestWithResourceName:@"TestPasswordArchiveWithEmptyDirectoryOnly"];
 }
 
 - (void)testIsPasswordValidForArchiveAtPathWithEmptyFile {
-    NSString *zipPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"TestPasswordArchiveWithEmptyFile" ofType:@"zip"];
-    
-    NSError *error = nil;
-    
-    BOOL fileHasValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd" error:&error];
-    
-    XCTAssertTrue(fileHasValidPassword, @"Valid password reports false.");
-    
-    BOOL fileHasInvalidValidPassword = [SSZipArchive isPasswordValidForArchiveAtPath:zipPath password:@"passw0rd123" error:&error];
-    
-    XCTAssertFalse(fileHasInvalidValidPassword, @"Invalid password reports true.");
+    [self performIsPasswordInvalidForArchiveAtPathTestWithResourceName:@"TestPasswordArchiveWithEmptyFile"];
 }
 
 
